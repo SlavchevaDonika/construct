@@ -1,0 +1,507 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Catamaran', sans-serif;
+    background-color: #fff;
+    color: #666;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0px 20px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/*header*/
+
+
+/*Top section*/
+
+#social {
+    float: left;
+}
+
+#basicnav {
+    float: right;
+}
+
+#topsection ul {
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 44px;
+}
+
+#topsection li {
+    float: left;
+    border-right: 1px solid #eee;
+    font-size: 0.8rem;
+    height: 44px;
+}
+
+#topsection li a {
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    padding: 0 12px;
+    text-decoration: none;
+    color: #666;
+}
+
+#topsection li a i {
+    line-height: 44px;
+}
+
+#topsection li :hover {
+    background-color: #eee;
+}
+
+
+/* Brand + contact section*/
+
+.wrap {
+    background-color: rgb(241, 241, 241);
+    border: solid 1px #eee;
+    min-height: 100px;
+    text-align: left;
+    padding-top: 25px;
+}
+
+#brand h1 {
+    float: left;
+    line-height: 100%;
+    margin-right: 40px;
+    color: #666;
+}
+
+.wrap ul {
+    float: right;
+    color: #666;
+}
+
+.wrap li {
+    float: left;
+    margin-left: 20px;
+}
+
+.contact i {
+    float: left;
+    margin: 5px 0;
+    font-size: 1.5rem;
+}
+
+.contact div {
+    float: right;
+    line-height: 1.2rem;
+    padding: 0 15px;
+    border-right: rgb(216, 216, 216) 1px solid;
+}
+
+.contactdata {
+    color: #f18052;
+    display: block;
+    text-align: left;
+    font-weight: 600;
+}
+
+
+/*Main Navigation*/
+
+#mainnav ul {
+    float: left;
+    height: 50px;
+}
+
+#mainnav li {
+    float: left;
+}
+
+#mainnav a {
+    display: block;
+    height: 50px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    line-height: 50px;
+    text-transform: uppercase;
+    padding: 0 12px;
+    text-decoration: none;
+    color: #666;
+}
+
+#mainnav .current a,
+#mainnav a:hover {
+    color: #f18052;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+}
+
+#search i {
+    height: 50px;
+    line-height: 50px;
+    display: block;
+}
+
+#search a {
+    height: 50px;
+    line-height: 50px;
+}
+
+#search form {
+    width: 100%;
+    padding: 3px;
+    font-size: 0.9rem;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#search input {
+    border: none;
+    width: 100%;
+}
+
+
+/*#showcase */
+
+#showcase {
+    height: 400px;
+    background-image: url(../img/showcase.jpg);
+    background-repeat: no-repeat;
+    background-position: 70% 40%;
+    /*background-attachment: fixed;*/
+}
+
+#whitebox {
+    color: #666;
+    line-height: 1.6;
+    background-color: rgba(255, 255, 255, .9);
+    margin-top: 40px;
+    margin-left: -15px;
+    border-radius: 2px;
+    padding: 30px;
+    max-width: 450px;
+    position: absolute;
+}
+
+#whitebox h1 {
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+#startplan {
+    color: #666;
+    float: left;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.button {
+    float: right;
+    border: #666 solid 2px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: #666;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: 5px;
+    letter-spacing: 1px;
+    display: block;
+}
+
+.button:hover {
+    background-color: #666;
+    color: #ccc;
+    transition: ease-in-out 300ms;
+}
+
+
+/*What we do*/
+
+.whatWeDo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.whatWeDo_one_third span {
+    color: #f18052;
+    margin: 10px 0;
+}
+
+.whatWeDo_one_third {
+    display: flex;
+    flex-direction: column;
+    width: 31%;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.whatWeDo_one_third h3 {
+    margin-top: 20px;
+}
+
+.whatWeDo_one_third img {
+    max-width: 100%;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+
+/* Wrapper Orange*/
+
+.wrapOrange {
+    height: 400px;
+    background: linear-gradient( rgba(247, 157, 117, 0.9), rgba(247, 157, 117, 0.9)), url(../img/crane2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*services*/
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+    line-height: 1.6;
+    margin-top: 50px;
+}
+
+.services_one_third {
+    width: 32%;
+    margin-top: 30px;
+    padding-left: 80px;
+}
+
+.services_one_third img {
+    display: block;
+    margin-left: -80px;
+    float: left;
+    width: 64px;
+}
+
+#projects {
+    /*position: relative;
+      overflow: hidden;*/
+    margin-top: 60px;
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+
+/*Galery grid*/
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.portfolio-item {
+    text-align: center;
+    max-width: 100%;
+}
+
+.portfolio-item img {
+    display: block;
+    max-width: 100%;
+}
+
+.portfolio-image-desc {
+    background-color: white;
+}
+
+.portfolio-image-desc a {
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    color: #666;
+}
+
+.wrap2,
+.wrap2 a {
+    background-color: #f18052;
+    text-align: center;
+    padding: 30px 0;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-bottom: 80px;
+}
+
+.wrap2:hover {
+    background-color: #f18052;
+    opacity: 0.9;
+    transition: ease-in 300ms;
+}
+
+
+/* Style the tab */
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+
+/* Style the buttons that are used to open the tab content */
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 25px;
+    transition: 0.3s;
+    color: #666;
+    font-weight: 600;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+#tabnavigation {
+    float: left;
+    max-width: 800px;
+}
+
+#sidebar {
+    float: right;
+    max-width: 600px;
+    background-color: #f18052;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+#WorkEthic figure {
+    float: left;
+    border: solid #ccc 1px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 1.2rem;
+}
+
+#WorkEthic figure img {
+    max-width: 300px;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#WorkEthic div {
+    float: right;
+    max-width: 450px;
+    padding-left: 10px;
+}
+
+@media (max-width: 800px) {
+    .container {
+        max-width: 700px;
+    }
+    #contacts {
+        display: none;
+    }
+    #brand h1 {
+        text-align: center;
+        float: none;
+        margin: auto;
+    }
+    #social {
+        display: none;
+    }
+    #basicnav {
+        float: none;
+        display: flex;
+        justify-content: center;
+    }
+    #mainnav ul {
+        display: none;
+    }
+    #startplan,
+    .button {
+        float: none;
+        text-align: center;
+    }
+    .whatWeDo_one_third {
+        width: 48%;
+    }
+    .services_one_third {
+        width: 48%;
+    }
+    #gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    #tabnavigation {
+        float: none;
+    }
+    #sidebar {
+        float: none;
+    }
+}
+
+@media (max-width: 460px) {
+    .container {
+        max-width: 400px;
+    }
+    .whatWeDo_one_third {
+        width: 100%;
+    }
+    .services_one_third {
+        width: 100%;
+    }
+    #gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    #tabnavigation {
+        float: none;
+    }
+    #sidebar {
+        float: none;
+    }
+}

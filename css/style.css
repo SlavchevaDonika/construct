@@ -416,24 +416,13 @@ li {
     border-top: none;
 }
 
-#WorkEthic figure {
+#workEthic img {
     float: left;
-    border: solid #ccc 1px;
+    max-width: 250px;
     border-radius: 5px;
-    text-align: center;
-    line-height: 1.2rem;
-}
-
-#WorkEthic figure img {
-    max-width: 300px;
-    border-radius: 5px;
+    margin-right: 1rem;
+    border: #eee solid 1px;
     padding: 3px;
-}
-
-#WorkEthic div {
-    float: right;
-    max-width: 450px;
-    padding-left: 10px;
 }
 
 @media (max-width: 800px) {

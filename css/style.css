@@ -1,13 +1,12 @@
 * {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
 }
 
 body {
     font-family: 'Catamaran', sans-serif;
     background-color: #fff;
     color: #666;
+    margin: 0;
 }
 
 li {
@@ -44,6 +43,8 @@ li {
     text-decoration: none;
     text-transform: uppercase;
     height: 44px;
+    margin: 0;
+    padding: 0;
 }
 
 #topsection li {
@@ -73,27 +74,38 @@ li {
 
 /* Brand + contact section*/
 
-.wrap {
+.wrapGray {
     background-color: rgb(241, 241, 241);
     border: solid 1px #eee;
     min-height: 100px;
     text-align: left;
-    padding-top: 25px;
+    text-align: center;
+}
+
+.wrapOrange {
+    background-color: #f18052;
+    border: solid 1px #eee;
+    min-height: 100px;
+    text-align: left;
+    text-align: center;
 }
 
 #brand h1 {
     float: left;
-    line-height: 100%;
     margin-right: 40px;
     color: #666;
+    margin: 0;
+    line-height: 100px;
 }
 
-.wrap ul {
+.wrapGray ul {
     float: right;
     color: #666;
+    margin-top: 2rem;
+    padding: 0;
 }
 
-.wrap li {
+.wrapGray li {
     float: left;
     margin-left: 20px;
 }
@@ -124,6 +136,7 @@ li {
 #mainnav ul {
     float: left;
     height: 50px;
+    margin: 0;
 }
 
 #mainnav li {
@@ -187,7 +200,6 @@ li {
     background-image: url(../img/showcase.jpg);
     background-repeat: no-repeat;
     background-position: 70% 40%;
-    /*background-attachment: fixed;*/
 }
 
 #whitebox {
@@ -198,7 +210,7 @@ li {
     margin-left: -15px;
     border-radius: 2px;
     padding: 30px;
-    max-width: 450px;
+    max-width: 460px;
     position: absolute;
 }
 
@@ -215,6 +227,7 @@ li {
     line-height: 1.6;
     max-width: 600px;
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .button {
@@ -226,7 +239,7 @@ li {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
-    margin-left: 5px;
+    margin: 3rem;
     letter-spacing: 1px;
     display: block;
 }
@@ -274,7 +287,7 @@ li {
 
 /* Wrapper Orange*/
 
-.wrapOrange {
+.orangebackgroundimg {
     height: 400px;
     background: linear-gradient( rgba(247, 157, 117, 0.9), rgba(247, 157, 117, 0.9)), url(../img/crane2.jpg);
     background-size: cover;
@@ -295,8 +308,11 @@ li {
 
 .services_one_third {
     width: 32%;
-    margin-top: 30px;
     padding-left: 80px;
+}
+
+.services_one_third h4 {
+    margin-top: 0;
 }
 
 .services_one_third img {
@@ -304,15 +320,6 @@ li {
     margin-left: -80px;
     float: left;
     width: 64px;
-}
-
-#projects {
-    /*position: relative;
-      overflow: hidden;*/
-    margin-top: 60px;
-    padding: 60px 0;
-    background-color: #f9f9f9;
-    text-align: center;
 }
 
 
@@ -325,17 +332,21 @@ li {
 }
 
 .portfolio-item {
-    text-align: center;
-    max-width: 100%;
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+
+.portfolio-item p,
+.portfolio-item h3 {
+    text-align: left;
+    margin: 0;
+    padding: 0;
 }
 
 .portfolio-item img {
     display: block;
     max-width: 100%;
-}
-
-.portfolio-image-desc {
-    background-color: white;
+    padding-bottom: 1rem;
 }
 
 .portfolio-image-desc a {
@@ -345,57 +356,54 @@ li {
     color: #666;
 }
 
-.wrap2,
-.wrap2 a {
+.wrapOrange a,
+.wrapOrange p {
     background-color: #f18052;
     text-align: center;
-    padding: 30px 0;
     color: white;
     font-size: 1.5rem;
     font-weight: 100;
     letter-spacing: 1px;
-    margin-bottom: 80px;
 }
 
-.wrap2:hover {
+.wrapOrange:hover {
     background-color: #f18052;
     opacity: 0.9;
     transition: ease-in 300ms;
 }
 
 
-/* Style the tab */
+/*Tab menu*/
 
 .tab {
+    margin-top: 2rem;
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
 }
 
-
-/* Style the buttons that are used to open the tab content */
-
-.tab button {
-    background-color: inherit;
+.tab li {
     float: left;
-    border: none;
+    border: 1px solid #ccc;
+    border-bottom: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 25px;
+    padding: 5px 40px;
     transition: 0.3s;
     color: #666;
     font-weight: 600;
+    background-color: #eee;
 }
 
-.tab button:hover {
+.tab li:hover {
     background-color: #ddd;
 }
 
 
 /* Create an active/current tablink class */
 
-.tab button.active {
-    background-color: #ccc;
+.tab li.active {
+    background-color: #fff;
+    border-bottom: none;
 }
 
 #tabnavigation {
@@ -403,26 +411,84 @@ li {
     max-width: 800px;
 }
 
-#sidebar {
-    float: right;
-    max-width: 600px;
-    background-color: #f18052;
-}
-
 .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
     border-top: none;
 }
 
 #workEthic img {
+    max-width: 280px;
     float: left;
-    max-width: 250px;
+    padding-right: 1rem;
+}
+
+#teamproperties {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#phone {
+    float: right;
+    margin: 1.5rem;
+}
+
+#address {
+    float: left;
+    margin: 1.5rem;
+}
+
+
+/*Quick form*/
+
+#sidebar {
+    margin: 2rem 0;
+    float: right;
+    max-width: 300px;
+}
+
+.quickform {}
+
+.quickform h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+}
+
+.quickform input {
+    margin: 5px 0;
+    padding: 5px;
+    border: 2px solid #ccc;
+    font: 1em 'Catamaran', sans-serif;
+}
+
+.quickform textarea {
+    margin: 5px 0;
+    padding: 5px;
+    border: 2px solid #ccc;
+    font: 1em 'Catamaran', sans-serif;
+    color: #666;
+}
+
+.button2 {
+    float: right;
+    color: white;
+    padding: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background-color: #f18052;
+    border: none;
     border-radius: 5px;
-    margin-right: 1rem;
-    border: #eee solid 1px;
-    padding: 3px;
+}
+
+.button2:hover {
+    background-color: #c26641;
 }
 
 @media (max-width: 800px) {

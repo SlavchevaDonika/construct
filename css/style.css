@@ -1,7 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Catamaran', sans-serif;
     background-color: #fff;
@@ -54,7 +50,8 @@ li {
     height: 44px;
 }
 
-#topsection li a {
+#topsection li a,
+#topsection li span {
     display: block;
     height: 44px;
     line-height: 44px;
@@ -67,8 +64,42 @@ li {
     line-height: 44px;
 }
 
-#topsection li :hover {
+#social>li :hover {
     background-color: #eee;
+}
+
+#basicnav>li :hover {
+    background-color: #eee;
+}
+
+
+/*Locations dropdown*/
+
+.dropdown:hover .location-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+}
+
+.location-menu {
+    display: none;
+}
+
+.dropdown>span {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.location-menu li {
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    padding: 0 20px;
+}
+
+.location-menu li:last-of-type {
+    border-bottom: none;
 }
 
 
@@ -258,11 +289,16 @@ li {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 50px;
+    ;
+}
+
+.whatWeDo_one_third h3 {
+    margin-bottom: 0;
 }
 
 .whatWeDo_one_third span {
     color: #f18052;
-    margin: 10px 0;
+    margin-bottom: 0;
 }
 
 .whatWeDo_one_third {
@@ -271,11 +307,6 @@ li {
     width: 31%;
     text-align: center;
     line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-.whatWeDo_one_third h3 {
-    margin-top: 20px;
 }
 
 .whatWeDo_one_third img {
@@ -340,7 +371,7 @@ li {
 .portfolio-item h3 {
     text-align: left;
     margin: 0;
-    padding: 0;
+    padding: 0 1rem;
 }
 
 .portfolio-item img {

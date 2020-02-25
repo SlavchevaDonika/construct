@@ -75,14 +75,14 @@ li {
 
 /*Locations dropdown*/
 
-.dropdown:hover .location-menu {
+.dropdown:hover .dropdown-menu {
     display: flex;
     flex-direction: column;
     position: absolute;
     z-index: 1;
 }
 
-.location-menu {
+.dropdown-menu {
     display: none;
 }
 
@@ -92,13 +92,13 @@ li {
     cursor: pointer;
 }
 
-.location-menu li {
+.dropdown-menu li {
     border-bottom: 1px solid #eee;
     background-color: #fff;
     padding: 0 20px;
 }
 
-.location-menu li:last-of-type {
+.dropdown-menu li:last-of-type {
     border-bottom: none;
 }
 
@@ -168,6 +168,7 @@ li {
     float: left;
     height: 50px;
     margin: 0;
+    padding: 0;
 }
 
 #mainnav li {

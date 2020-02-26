@@ -225,6 +225,76 @@ li {
 }
 
 
+/* sidebar + hamburger menu */
+
+.hamburger-menu {
+    float: left;
+    margin-top: 0.8rem;
+}
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #666;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.side-nav>a,
+.side-li>a {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 10px 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    color: #ccc;
+}
+
+.side-nav .btn-close {
+    position: absolute;
+    top: 0;
+    right: 22px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+/* dropdown sidebar */
+
+.dropdown:hover .dropdown-menu-gray {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropdown-menu-gray {
+    display: none;
+}
+
+.dropdown-menu-gray li {
+    border-bottom: 1px solid #ccc;
+    background-color: #666;
+}
+
+.dropdown-menu-gray li:last-of-type {
+    border-bottom: none;
+}
+
+
 /*#showcase */
 
 #showcase {
@@ -290,7 +360,6 @@ li {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 50px;
-    ;
 }
 
 .whatWeDo_one_third h3 {
@@ -480,8 +549,6 @@ li {
     max-width: 300px;
 }
 
-.quickform {}
-
 .quickform h3 {
     margin: 0;
     padding: 0;
@@ -523,6 +590,12 @@ li {
     background-color: #c26641;
 }
 
+@media(min-width: 800px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
+
 @media (max-width: 800px) {
     .container {
         max-width: 700px;
@@ -542,6 +615,10 @@ li {
         float: none;
         display: flex;
         justify-content: center;
+    }
+    .hamburger-menu {
+        float: left;
+        margin-top: 0.8rem;
     }
     #mainnav ul {
         display: none;
@@ -573,6 +650,13 @@ li {
 @media (max-width: 460px) {
     .container {
         max-width: 400px;
+    }
+    .hamburger-menu {
+        float: left;
+        margin-top: 0.8rem;
+    }
+    #mainnav ul {
+        display: none;
     }
     .whatWeDo_one_third {
         width: 100%;

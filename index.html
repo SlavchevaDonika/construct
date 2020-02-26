@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/kisspng-house-scalable-vector-graphics-building-clip-art-houses.png" sizes="16x16 32x32" type="image/png">
 </head>
 
 <body>
@@ -67,6 +68,17 @@
             </div>
         </div>
         <div class="container clearfix">
+            <!-- hamburger menu -->
+            <div class="hamburger-menu">
+                <a href="#" onclick="openSlideMenu()">
+                    <svg width="30" height="30">
+                        <path d="M0,5 30,5" stroke=#666 stroke-width="5"/>
+                        <path d="M0,14 30,14" stroke=#666 stroke-width="5"/>
+                        <path d="M0,23 30,23" stroke=#666 stroke-width="5"/>
+                    </svg>
+                </a>
+            </div>
+            <!--  -->
             <nav id="mainnav">
                 <ul>
                     <li class="current"><a href="">home</a></li>
@@ -103,6 +115,38 @@
 
                 </div>
             </nav>
+            <!-- Side navigation -->
+
+            <div id="side-menu" class="side-nav">
+                <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+                <ul>
+                    <li class="current side-li"><a href="">home</a></li>
+                    <li class="dropdown side-li"><a href="">what we do &#9662</a>
+                        <ul class="dropdown-menu-gray">
+                            <li><a href="#">Housing Management</a></li>
+                            <li><a href="#">Construction Planning</a></li>
+                            <li><a href="#">Green Homes</a></li>
+                            <li><a href="#">Architecture Design</a></li>
+                            <li><a href="#">Interior Planning</a></li>
+                        </ul>
+                    </li>
+                    <li class="side-li"><a href="">about us</a></li>
+                    <li class="side-li"><a href="">what we do</a></li>
+                    <li class="dropdown side-li"><a href="">projects &#9662</a>
+                        <ul class="dropdown-menu-gray">
+                            <li><a href="#">project 1</a></li>
+                            <li><a href="#">project 2</a></li>
+                            <li><a href="#">project 3</a></li>
+                            <li><a href="#">project 4</a></li>
+                            <li><a href="#">project 5</a></li>
+                        </ul>
+                    </li>
+                    <li class="side-li"><a href="">investors</a></li>
+                    <li class="side-li"><a href="">news</a></li>
+                    <li class="side-li"><a href="">careers</a></li>
+                </ul>
+            </div>
+            <!--  -->
         </div>
     </header>
     <main>
@@ -365,6 +409,17 @@
             document.getElementById(tabName).style.display = "block";
 
             evt.target.classList.add("active");
+        }
+
+        //Sidebar and hamburger menu 
+        function openSlideMenu() {
+            document.getElementById('side-menu').style.width = '250px';
+            document.getElementById('container').style.marginLeft = '250px';
+        }
+
+        function closeSlideMenu() {
+            document.getElementById('side-menu').style.width = '0';
+            document.getElementById('container').style.marginLeft = '0';
         }
     </script>
     <footer>

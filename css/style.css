@@ -21,6 +21,10 @@ li {
     display: table;
 }
 
+.centred {
+    text-align: center;
+}
+
 
 /*header*/
 
@@ -568,7 +572,7 @@ li {
 
 /*Quick form*/
 
-#sidebar {
+.sidebar {
     margin: 2rem 0;
     float: right;
     max-width: 300px;
@@ -613,6 +617,87 @@ li {
 
 .button2:hover {
     background-color: #c26641;
+}
+
+.investgrid_four_seven {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 3rem 0;
+}
+
+.investgrid_four_seven img {
+    max-width: 150px;
+}
+
+.investgrid_four_seven li {
+    border: 0.5px dashed #ccc;
+}
+
+.col_three_seven {
+    float: left;
+    max-width: 500px;
+}
+
+.investgrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin: 3rem 0;
+}
+
+.investgrid img {
+    max-width: 150px;
+}
+
+.investgrid li {
+    border: 0.5px dashed #ccc;
+}
+
+
+/* contact */
+
+#contact form {
+    max-width: 800px;
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#contact form label {
+    /* display: block; */
+}
+
+#contact form p {
+    margin: 0;
+}
+
+#contact form .full {
+    grid-column: 1 / 4;
+}
+
+#contact form button,
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+#contact form button {
+    background: #f18052;
+    border: 0;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+#contact form button:hover,
+#contact form button:focus {
+    background: #c26641;
+    color: #fff;
+    outline: 0;
+    transition: background-color 200ms ease-out;
+    border-radius: 5px;
 }
 
 
@@ -788,7 +873,7 @@ li {
     #tabnavigation {
         float: none;
     }
-    #sidebar {
+    .sidebar {
         float: none;
     }
 }
@@ -818,7 +903,7 @@ li {
     #tabnavigation {
         float: none;
     }
-    #sidebar {
+    .sidebar {
         float: none;
     }
     .col_one_third {

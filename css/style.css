@@ -290,6 +290,7 @@ li {
     border-bottom: 1px solid #ccc;
     background-color: #666;
     margin-bottom: 1rem;
+    padding-bottom: 3px;
 }
 
 .dropdown-menu-gray li:last-of-type {

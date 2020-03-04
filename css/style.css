@@ -578,6 +578,12 @@ li {
     max-width: 300px;
 }
 
+.sidebar h3,
+.sidebar p {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
 .quickform h3 {
     margin: 0;
     padding: 0;
@@ -622,7 +628,8 @@ li {
 .investgrid_four_seven {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 3rem 0;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .investgrid_four_seven img {
@@ -641,7 +648,8 @@ li {
 .investgrid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    margin: 3rem 0;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .investgrid img {
@@ -660,10 +668,7 @@ li {
     float: left;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-}
-
-#contact form label {
-    /* display: block; */
+    grid-gap: 20px;
 }
 
 #contact form p {
@@ -678,7 +683,7 @@ li {
 #contact form input,
 #contact form textarea {
     width: 100%;
-    padding: 1em;
+    padding: 1em 0;
     border: 1px solid #ccc;
 }
 
@@ -814,6 +819,19 @@ li {
     .services_one_third {
         width: 40%;
     }
+    .investgrid_four_seven {
+        float: left;
+    }
+    .centred {
+        float: left;
+    }
+    .sidebar {
+        float: left;
+    }
+    .investgrid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
 
 @media(min-width: 801px) {
@@ -876,6 +894,16 @@ li {
     .sidebar {
         float: none;
     }
+    .investgrid_four_seven {
+        float: left;
+    }
+    .centred {
+        float: left;
+    }
+    .investgrid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @media (max-width: 460px) {
@@ -908,5 +936,17 @@ li {
     }
     .col_one_third {
         float: left;
+    }
+    #contact form {
+        display: inline;
+    }
+    .investgrid_four_seven {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .centred {
+        float: left;
+    }
+    .investgrid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

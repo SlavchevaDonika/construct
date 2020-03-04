@@ -854,15 +854,17 @@ li {
 }
 
 
-/* FAQS */
+/* FAQS
 
 .col_two {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     max-height: 900px;
+    max-width: 1170px;
     width: 50%;
 }
+ */
 
 .col_two P {
     margin-right: 20px;

@@ -819,14 +819,18 @@ li {
     .services_one_third {
         width: 40%;
     }
+    .col_three_seven {
+        float: none;
+        max-width: 950px;
+    }
     .investgrid_four_seven {
-        float: left;
+        float: none;
     }
     .centred {
-        float: left;
+        float: none;
     }
     .sidebar {
-        float: left;
+        float: none;
     }
     .investgrid {
         display: grid;
@@ -894,11 +898,12 @@ li {
     .sidebar {
         float: none;
     }
-    .investgrid_four_seven {
-        float: left;
+    .col_three_seven {
+        float: none;
+        max-width: 950px;
     }
-    .centred {
-        float: left;
+    .investgrid_four_seven {
+        float: none;
     }
     .investgrid {
         display: grid;
@@ -931,9 +936,6 @@ li {
     #tabnavigation {
         float: none;
     }
-    .sidebar {
-        float: none;
-    }
     .col_one_third {
         float: left;
     }
@@ -941,12 +943,10 @@ li {
         display: inline;
     }
     .investgrid_four_seven {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .centred {
-        float: left;
+        grid-template-columns: repeat(2, 1fr);
+        margin: auto;
     }
     .investgrid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }

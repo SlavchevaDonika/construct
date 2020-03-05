@@ -687,7 +687,7 @@
     
     .col_two_third {
         float: left;
-        max-width: 700px;
+        max-width: 70%;
     }
     
     .brand {
@@ -707,7 +707,6 @@
     }
     
     .col_two_third_links {
-        max-width: 700px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -732,20 +731,19 @@
     
     .col_one_third {
         float: right;
+        max-width: 28%;
     }
     
     .col_one_third h2 {
         margin: 0;
         padding: 0;
         color: #eee;
-        text-align: left;
         letter-spacing: 1px;
     }
     
     .col_one_third p {
         margin: 0;
         padding: 0;
-        text-align: left;
     }
     /* darkerfooter */
     
@@ -917,6 +915,16 @@
         }
         .careersgrid {
             grid-template-columns: repeat(3, 1fr);
+        }
+        .col_one_third {
+            float: none;
+            max-width: 100%;
+            text-align: center;
+        }
+        .col_two_third {
+            float: none;
+            max-width: 100%;
+            border-bottom: 1px solid #666;
         }
     }
     

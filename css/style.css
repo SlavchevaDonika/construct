@@ -805,6 +805,38 @@
         height: 0;
         border-top: 1px solid #eee;
     }
+    /* news */
+    
+    #news img {
+        float: left;
+        max-width: 300px;
+        margin: 1rem 1rem 1rem;
+        border-radius: 10px;
+    }
+    
+    #news li {
+        display: inline;
+    }
+    
+    #news a {
+        text-decoration: none;
+        color: #666;
+    }
+    
+    #news li:before {
+        content: '/';
+        display: inline-block;
+        margin-right: 10px;
+    }
+    
+    #news li:first-of-type::before {
+        content: none;
+    }
+    
+    #news .button {
+        float: left;
+        margin: 1rem;
+    }
     
     @media screen and (min-width: 801px) and (max-width: 950px) {
         #mainnav a {
@@ -977,5 +1009,13 @@
         }
         .careersgrid {
             grid-template-columns: repeat(2, 1fr);
+        }
+        #news {
+            margin: auto;
+            text-align: center;
+        }
+        #news img {
+            float: none;
+            max-width: 350px;
         }
     }

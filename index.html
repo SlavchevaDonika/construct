@@ -94,7 +94,6 @@
                         </ul>
                     </li>
                     <li><a href="#">about us</a></li>
-                    <li><a href="#">what we do</a></li>
                     <li class="dropdown"><a>projects &#9662</a>
                         <ul class="dropdown-menu">
                             <li><a href="#">project 1</a></li>
@@ -122,7 +121,7 @@
             <div id="side-menu" class="side-nav">
                 <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
                 <ul id="sidemenu">
-                    <li class="current side-li"><a href="#">home</a></li>
+                    <li class="current side-li"><a href="#" onclick="closeSlideMenu()">home</a></li>
                     <li class="dropdown side-li"><a href="#">what we do &#9662</a>
                         <ul class="dropdown-menu-gray">
                             <li><a href="#">Housing Management</a></li>
@@ -132,8 +131,7 @@
                             <li><a href="#">Interior Planning</a></li>
                         </ul>
                     </li>
-                    <li class="side-li"><a href="#">about us</a></li>
-                    <li class="side-li"><a href="#">what we do</a></li>
+                    <li class="side-li"><a href="#" onclick="closeSlideMenu()">about us</a></li>
                     <li class="dropdown side-li"><a href="#">projects &#9662</a>
                         <ul class="dropdown-menu-gray">
                             <li><a href="#">Project 1</a></li>
@@ -143,9 +141,9 @@
                             <li><a href="#">Project 5</a></li>
                         </ul>
                     </li>
-                    <li class="side-li"><a href="#investors">investors</a></li>
-                    <li class="side-li"><a href="#news">news</a></li>
-                    <li class="side-li"><a href="#careers">careers</a></li>
+                    <li class="side-li"><a href="#investors" onclick="closeSlideMenu()">investors</a></li>
+                    <li class="side-li"><a href="#news" onclick="closeSlideMenu()">news</a></li>
+                    <li class="side-li"><a href="#careers" onclick="closeSlideMenu()">careers</a></li>
                 </ul>
             </div>
             <!--  -->
@@ -805,7 +803,7 @@
             document.getElementById('container').style.marginLeft = '0';
         }
 
-
+        //Sidebar submenu onclick open and close
         $(function() {
             $('#sidemenu > li').click(function(e) {
                 e.stopPropagation();

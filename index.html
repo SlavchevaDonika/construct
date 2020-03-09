@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
     <link rel="icon" href="img/kisspng-house-scalable-vector-graphics-building-clip-art-houses.png" sizes="16x16 32x32" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -119,7 +121,7 @@
 
             <div id="side-menu" class="side-nav">
                 <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-                <ul>
+                <ul id="sidemenu">
                     <li class="current side-li"><a href="#">home</a></li>
                     <li class="dropdown side-li"><a href="#">what we do &#9662</a>
                         <ul class="dropdown-menu-gray">
@@ -244,7 +246,8 @@
         </div>
     </main>
     <div class="wrapGray">
-        <h2>Some of Our Esteemed Projects:</h2>
+        <h1>Some of Our Esteemed Projects:</h1>
+        <span class="pagetop"><a href="#">Home</a></span>
     </div>
 
     <section id="gallery">
@@ -390,7 +393,6 @@
     <div id="investors">
         <div class="wrapGray">
             <h1>Investors</h1>
-            <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, temporibus.</h4>
             <span class="pagetop"><a href="#">Home</a></span>
         </div>
         <div class="container clearfix">
@@ -620,7 +622,6 @@
     <div id="news">
         <div class="wrapGray">
             <h1>News</h1>
-            <h4>A Short Page Title Tagline</h4>
             <span class="pagetop"><a href="#">Home</a></span>
         </div>
         <div class="container clearfix ">
@@ -630,7 +631,8 @@
                 <ul>
                     <li><i class="fa fa-calendar" aria-hidden="true"></i> 10th Feb 2014</li>
                     <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> admin</a></li>
-                    <li><i class="fa fa-folder-open-o" aria-hidden="true"></i> <a href="#">General</a>, <a href="#">Media</a></li>
+                    <li><a href="#"><i class="fa fa-folder-open-o" aria-hidden="true"></i> <a href="#">General,</a></li>
+                    <li><a href="#">Media</a></li>
                     <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 13</a></li>
                     <li><a href="#"><i class="fa fa-camera-retro" aria-hidden="true"></i></a></li>
                 </ul>
@@ -697,43 +699,6 @@
     </div>
 
 
-
-
-
-
-
-    <script>
-        function openTab(evt, tabName) {
-            console.log(evt);
-
-            document.querySelectorAll(".tabcontent")
-                .forEach(function(tabcontent) {
-                    tabcontent.style.display = 'none';
-                });
-
-            // Get all elements with class="tablinks" and remove the class "active"
-            document.querySelectorAll(".tablinks")
-                .forEach(function(tablinks) {
-                    tablinks.classList.remove("active");
-                });
-
-            // Show the current tab, and add an "active" class to the button that opened the tab
-            document.getElementById(tabName).style.display = "block";
-
-            evt.target.classList.add("active");
-        }
-
-        //Sidebar and hamburger menu 
-        function openSlideMenu() {
-            document.getElementById('side-menu').style.width = '250px';
-            document.getElementById('container').style.marginLeft = '250px';
-        }
-
-        function closeSlideMenu() {
-            document.getElementById('side-menu').style.width = '0';
-            document.getElementById('container').style.marginLeft = '0';
-        }
-    </script>
 
     <footer class="footer dark">
         <div class="container clearfix">
@@ -808,7 +773,51 @@
         </div>
 
     </footer>
+    <script>
+        function openTab(evt, tabName) {
+            console.log(evt);
 
+            document.querySelectorAll(".tabcontent")
+                .forEach(function(tabcontent) {
+                    tabcontent.style.display = 'none';
+                });
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            document.querySelectorAll(".tablinks")
+                .forEach(function(tablinks) {
+                    tablinks.classList.remove("active");
+                });
+
+            // Show the current tab and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+
+            evt.target.classList.add("active");
+        }
+
+        //Sidebar and hamburger menu 
+        function openSlideMenu() {
+            document.getElementById('side-menu').style.width = '250px';
+            document.getElementById('container').style.marginLeft = '250px';
+        }
+
+        function closeSlideMenu() {
+            document.getElementById('side-menu').style.width = '0';
+            document.getElementById('container').style.marginLeft = '0';
+        }
+
+
+        $(function() {
+            $('#sidemenu > li').click(function(e) {
+                e.stopPropagation();
+                var $el = $('ul', this);
+                $('#sidemenu > li > ul').not($el).slideUp();
+                $el.stop(true, true).slideToggle(400);
+            });
+            $('#sidemenu > li > ul > li').click(function(e) {
+                e.stopImmediatePropagation();
+            });
+        });
+    </script>
 
 </body>
 

@@ -21,10 +21,6 @@
         display: table;
     }
     
-    .centred {
-        text-align: center;
-    }
-    
     .pagetop {
         float: right;
         position: relative;
@@ -609,7 +605,7 @@
     }
     
     .investgrid_four_seven img {
-        max-width: 150px;
+        max-width: 100%;
     }
     
     .investgrid_four_seven li {
@@ -630,7 +626,7 @@
     }
     
     .investgrid img {
-        max-width: 150px;
+        max-width: 100%;
     }
     
     .investgrid li {
@@ -710,7 +706,7 @@
         margin-right: 1.2rem;
     }
     
-    #contact form .full {
+    #contact form .fullLenght {
         grid-column: 1 / 4;
     }
     
@@ -718,7 +714,7 @@
     #contact form input,
     #contact form textarea {
         width: 100%;
-        padding: 1em 0;
+        padding: 0.7rem 0 0.7rem 0.2rem;
     }
     /* Footer */
     
@@ -837,9 +833,6 @@
         .investgrid_four_seven {
             float: none;
         }
-        .centred {
-            float: none;
-        }
         .sidebar {
             float: none;
         }
@@ -919,15 +912,9 @@
         .investgrid_four_seven {
             float: none;
         }
-        .investgrid_four_seven img {
-            max-width: 120px;
-        }
         .investgrid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-        }
-        .investgrid_four_seven img {
-            max-width: 120px;
         }
         .careersgrid {
             grid-template-columns: repeat(3, 1fr);
